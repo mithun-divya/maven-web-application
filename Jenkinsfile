@@ -15,7 +15,7 @@ sh "${maven_home}/bin/mvn clean sonar:sonar"
 }
 stage('Nexus Repository')
 {
-sh "${maven_home}/bin/mvn clean install"
+sh "${maven_home}/bin/mvn clean deploy"
 }
 stage('Deploy To tomcat')
 {
